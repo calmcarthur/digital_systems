@@ -1,0 +1,81 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity simple_alu is 
+	port (KEY: 		in 	std_logic_vector(3 downto 0); 	-- Push buttons 
+			SW: 		in 	std_logic_vector(9 downto 0); 	-- Toggle switches 
+			LEDR:		out 	std_logic_vector(9 downto 0); 	-- Red LEDs 
+			LEDG:		out 	std_logic_vector(7 downto 0);		-- Green LEDs 
+			HEX0,HEX1,HEX2,HEX3: out std_logic_vector(6 downto 0) -- HEX's
+			); 
+end entity simple_alu; 
+
+architecture main of simple_alu is 
+signal o0, o1, o2, o3, o4, o5, o6, o7: std_logic;
+signal u0, u1, u2, u3: 		std_logic;
+signal v0, v1, v2, v3: 		std_logic;
+signal is_sum:					std_logic;
+signal pro7, pro6, pro5, pro4, pro3, pro2, pro1, pro0: std_logic;
+signal sum4, sum3, sum2, sum1, sum0: std_logic;
+
+component Four_bits_adder is 
+	port (x3, x2, x1, x0: 					in std_logic;
+			y3, y2, y1, y0: 					in std_logic;
+			cout_4, s_3, s_2, s_1, s_0:	 out std_logic); 
+end component; 
+
+component Four_bit_multiplier is 
+	port (a3, a2, a1, a0: 	in							std_logic;
+			b3, b2, b1, b0: 	in							std_logic;
+			d7, d6, d5, d4, d3, d2, d1, d0: out 	std_logic); 
+end component;
+
+component seven_segment is
+	port (data_in:		in std_logic_vector(3 downto 0);
+			blanking:		in std_logic;						
+			segments_out: 	out std_logic_vector(6 downto 0) );
+end component;
+
+begin
+u0 <= SW(0); 
+u1 <= SW(1); 
+u2 <= SW(2); 
+u3 <= SW(3); 
+v0 <= SW(4); 
+v1 <= SW(5); 
+v2 <= SW(6); 
+v3 <= SW(7); 
+is_sum <= SW(8);
+
+component_1: entity work.Four_bits_adder(main) port map(u3, u2, u1, u0, v3, v2, v1, v0, sum4, sum3, sum2, sum1, sum0);
+component_2: entity work.Four_bit_multiplier(main) port map(u3, u2, u1, u0, v3, v2, v1, v0, pro7, pro6, pro5, pro4, pro3, pro2, pro1, pro0);
+
+process (is_sum)
+	begin
+		if (is_sum = '1') then
+			o7 <= '0';
+			o6 <= '0';
+			o5 <= '0';
+			o4 <= sum4;
+			o3 <= sum3;
+			o2 <= sum2;
+			o1 <= sum1;
+			o0 <= sum0;
+		else
+			o7 <= pro7;
+			o6 <= pro6;
+			o5 <= pro5;
+			o4 <= pro4;
+			o3 <= pro3;
+			o2 <= pro2;
+			o1 <= pro1;
+			o0 <= pro0;
+		end if;
+	end process;
+
+hex0_inst: entity work.seven_segment(behavioral) port map((o3 & o2 & o1 & o0), '0', HEX0);
+hex1_inst: entity work.seven_segment(behavioral) port map((o7 & o6 & o5 & o4), '0', HEX1);
+hex2_inst: entity work.seven_segment(behavioral) port map((u3 & u2 & u1 & u0), '0', HEX2);
+hex3_inst: entity work.seven_segment(behavioral) port map((v3 & v2 & v1 & v0), '0', HEX3);
+end architecture main; 

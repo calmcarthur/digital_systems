@@ -1,0 +1,12 @@
+|Simple_circuit
+LEDG[0] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+LEDG[1] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+KEY[0] => inst3.IN0
+SW[0] => inst.IN0
+SW[1] => inst.IN1
+SW[2] => inst2.IN1
+SW[3] => inst2.IN0
+LEDR[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[1] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+

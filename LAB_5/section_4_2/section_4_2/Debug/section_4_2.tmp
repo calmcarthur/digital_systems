@@ -1,0 +1,62 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.8</VERSION>
+ <DEVICE>"ATmega328P"</DEVICE>
+ <WORKING_DIR>C:\Users\mcart\Documents\syde_192L\LAB_5\section_4_2\section_4_2\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\mcart\Documents\syde_192L\LAB_5\section_4_2\section_4_2\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m328Pdef.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\mcart\Documents\syde_192L\LAB_5\section_4_2\section_4_2\Debug\section_4_2.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>section_4_2.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>section_4_2.map</FILE>
+  <FILE>section_4_2.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <master_loop><FILE>C:\Users\mcart\Documents\syde_192L\LAB_5\section_4_2\section_4_2\main.asm</FILE><LINE>12</LINE></master_loop>
+  <outer_outer_loop><FILE>C:\Users\mcart\Documents\syde_192L\LAB_5\section_4_2\section_4_2\main.asm</FILE><LINE>18</LINE></outer_outer_loop>
+  <outer_loop><FILE>C:\Users\mcart\Documents\syde_192L\LAB_5\section_4_2\section_4_2\main.asm</FILE><LINE>20</LINE></outer_loop>
+  <inner_loop><FILE>C:\Users\mcart\Documents\syde_192L\LAB_5\section_4_2\section_4_2\main.asm</FILE><LINE>22</LINE></inner_loop>
+  <zero><FILE>C:\Users\mcart\Documents\syde_192L\LAB_5\section_4_2\section_4_2\main.asm</FILE><LINE>39</LINE></zero>
+  <C0><FILE>C:\Users\mcart\Documents\syde_192L\LAB_5\section_4_2\section_4_2\main.asm</FILE><LINE>47</LINE></C0>
+  <one><FILE>C:\Users\mcart\Documents\syde_192L\LAB_5\section_4_2\section_4_2\main.asm</FILE><LINE>51</LINE></one>
+  <C1><FILE>C:\Users\mcart\Documents\syde_192L\LAB_5\section_4_2\section_4_2\main.asm</FILE><LINE>55</LINE></C1>
+  <two><FILE>C:\Users\mcart\Documents\syde_192L\LAB_5\section_4_2\section_4_2\main.asm</FILE><LINE>59</LINE></two>
+  <C2><FILE>C:\Users\mcart\Documents\syde_192L\LAB_5\section_4_2\section_4_2\main.asm</FILE><LINE>66</LINE></C2>
+  <three><FILE>C:\Users\mcart\Documents\syde_192L\LAB_5\section_4_2\section_4_2\main.asm</FILE><LINE>70</LINE></three>
+  <C3><FILE>C:\Users\mcart\Documents\syde_192L\LAB_5\section_4_2\section_4_2\main.asm</FILE><LINE>77</LINE></C3>
+  <four><FILE>C:\Users\mcart\Documents\syde_192L\LAB_5\section_4_2\section_4_2\main.asm</FILE><LINE>81</LINE></four>
+  <C4><FILE>C:\Users\mcart\Documents\syde_192L\LAB_5\section_4_2\section_4_2\main.asm</FILE><LINE>87</LINE></C4>
+  <five><FILE>C:\Users\mcart\Documents\syde_192L\LAB_5\section_4_2\section_4_2\main.asm</FILE><LINE>91</LINE></five>
+  <C5><FILE>C:\Users\mcart\Documents\syde_192L\LAB_5\section_4_2\section_4_2\main.asm</FILE><LINE>98</LINE></C5>
+  <six><FILE>C:\Users\mcart\Documents\syde_192L\LAB_5\section_4_2\section_4_2\main.asm</FILE><LINE>102</LINE></six>
+  <C6><FILE>C:\Users\mcart\Documents\syde_192L\LAB_5\section_4_2\section_4_2\main.asm</FILE><LINE>110</LINE></C6>
+  <seven><FILE>C:\Users\mcart\Documents\syde_192L\LAB_5\section_4_2\section_4_2\main.asm</FILE><LINE>114</LINE></seven>
+  <C7><FILE>C:\Users\mcart\Documents\syde_192L\LAB_5\section_4_2\section_4_2\main.asm</FILE><LINE>119</LINE></C7>
+  <eight><FILE>C:\Users\mcart\Documents\syde_192L\LAB_5\section_4_2\section_4_2\main.asm</FILE><LINE>123</LINE></eight>
+  <C8><FILE>C:\Users\mcart\Documents\syde_192L\LAB_5\section_4_2\section_4_2\main.asm</FILE><LINE>132</LINE></C8>
+  <nine><FILE>C:\Users\mcart\Documents\syde_192L\LAB_5\section_4_2\section_4_2\main.asm</FILE><LINE>136</LINE></nine>
+  <C9><FILE>C:\Users\mcart\Documents\syde_192L\LAB_5\section_4_2\section_4_2\main.asm</FILE><LINE>144</LINE></C9>
+  <ten><FILE>C:\Users\mcart\Documents\syde_192L\LAB_5\section_4_2\section_4_2\main.asm</FILE><LINE>148</LINE></ten>
+  <C10><FILE>C:\Users\mcart\Documents\syde_192L\LAB_5\section_4_2\section_4_2\main.asm</FILE><LINE>156</LINE></C10>
+  <eleven><FILE>C:\Users\mcart\Documents\syde_192L\LAB_5\section_4_2\section_4_2\main.asm</FILE><LINE>160</LINE></eleven>
+  <C11><FILE>C:\Users\mcart\Documents\syde_192L\LAB_5\section_4_2\section_4_2\main.asm</FILE><LINE>167</LINE></C11>
+  <twelve><FILE>C:\Users\mcart\Documents\syde_192L\LAB_5\section_4_2\section_4_2\main.asm</FILE><LINE>171</LINE></twelve>
+  <C12><FILE>C:\Users\mcart\Documents\syde_192L\LAB_5\section_4_2\section_4_2\main.asm</FILE><LINE>177</LINE></C12>
+  <thirteen><FILE>C:\Users\mcart\Documents\syde_192L\LAB_5\section_4_2\section_4_2\main.asm</FILE><LINE>181</LINE></thirteen>
+  <C13><FILE>C:\Users\mcart\Documents\syde_192L\LAB_5\section_4_2\section_4_2\main.asm</FILE><LINE>188</LINE></C13>
+  <fourteen><FILE>C:\Users\mcart\Documents\syde_192L\LAB_5\section_4_2\section_4_2\main.asm</FILE><LINE>192</LINE></fourteen>
+  <C14><FILE>C:\Users\mcart\Documents\syde_192L\LAB_5\section_4_2\section_4_2\main.asm</FILE><LINE>199</LINE></C14>
+  <fifteen><FILE>C:\Users\mcart\Documents\syde_192L\LAB_5\section_4_2\section_4_2\main.asm</FILE><LINE>203</LINE></fifteen>
+  <CERROR><FILE>C:\Users\mcart\Documents\syde_192L\LAB_5\section_4_2\section_4_2\main.asm</FILE><LINE>209</LINE></CERROR>
+ </LABELS>
+</ASSEMBLER_INFO>

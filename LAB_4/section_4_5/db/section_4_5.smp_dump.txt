@@ -1,0 +1,11 @@
+
+State Machine - |section_4_5|state
+Name state.flashinggreen2 state.red2 state.amber2 state.green2 state.flashinggreen1 state.red1 state.amber1 state.green1 
+state.green1 0 0 0 0 0 0 0 0 
+state.amber1 0 0 0 0 0 0 1 1 
+state.red1 0 0 0 0 0 1 0 1 
+state.flashinggreen1 0 0 0 0 1 0 0 1 
+state.green2 0 0 0 1 0 0 0 1 
+state.amber2 0 0 1 0 0 0 0 1 
+state.red2 0 1 0 0 0 0 0 1 
+state.flashinggreen2 1 0 0 0 0 0 0 1 

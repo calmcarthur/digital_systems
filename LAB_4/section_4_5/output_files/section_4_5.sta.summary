@@ -1,0 +1,149 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'CLOCK_50_B5B'
+Slack : -5.708
+TNS   : -78.243
+
+Type  : Slow 1100mV 85C Model Setup 'clock_10_hz'
+Slack : -2.083
+TNS   : -8.679
+
+Type  : Slow 1100mV 85C Model Setup 'clock_1_hz'
+Slack : -1.830
+TNS   : -9.407
+
+Type  : Slow 1100mV 85C Model Hold 'CLOCK_50_B5B'
+Slack : 0.435
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'clock_10_hz'
+Slack : 0.587
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'clock_1_hz'
+Slack : 0.961
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_50_B5B'
+Slack : -0.572
+TNS   : -22.830
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clock_1_hz'
+Slack : -0.538
+TNS   : -4.631
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clock_10_hz'
+Slack : -0.538
+TNS   : -4.630
+
+Type  : Slow 1100mV 0C Model Setup 'CLOCK_50_B5B'
+Slack : -5.945
+TNS   : -77.215
+
+Type  : Slow 1100mV 0C Model Setup 'clock_10_hz'
+Slack : -2.098
+TNS   : -8.746
+
+Type  : Slow 1100mV 0C Model Setup 'clock_1_hz'
+Slack : -1.846
+TNS   : -9.654
+
+Type  : Slow 1100mV 0C Model Hold 'CLOCK_50_B5B'
+Slack : 0.442
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'clock_10_hz'
+Slack : 0.612
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'clock_1_hz'
+Slack : 0.914
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_50_B5B'
+Slack : -0.621
+TNS   : -22.889
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clock_1_hz'
+Slack : -0.538
+TNS   : -4.648
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clock_10_hz'
+Slack : -0.538
+TNS   : -4.614
+
+Type  : Fast 1100mV 85C Model Setup 'CLOCK_50_B5B'
+Slack : -2.867
+TNS   : -26.158
+
+Type  : Fast 1100mV 85C Model Setup 'clock_10_hz'
+Slack : -0.954
+TNS   : -2.694
+
+Type  : Fast 1100mV 85C Model Setup 'clock_1_hz'
+Slack : -0.600
+TNS   : -2.751
+
+Type  : Fast 1100mV 85C Model Hold 'clock_10_hz'
+Slack : 0.096
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'CLOCK_50_B5B'
+Slack : 0.199
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'clock_1_hz'
+Slack : 0.420
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_50_B5B'
+Slack : -0.647
+TNS   : -12.364
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clock_1_hz'
+Slack : 0.125
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clock_10_hz'
+Slack : 0.160
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'CLOCK_50_B5B'
+Slack : -2.604
+TNS   : -22.079
+
+Type  : Fast 1100mV 0C Model Setup 'clock_10_hz'
+Slack : -0.880
+TNS   : -2.343
+
+Type  : Fast 1100mV 0C Model Setup 'clock_1_hz'
+Slack : -0.517
+TNS   : -2.367
+
+Type  : Fast 1100mV 0C Model Hold 'clock_10_hz'
+Slack : 0.069
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'CLOCK_50_B5B'
+Slack : 0.189
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'clock_1_hz'
+Slack : 0.371
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_50_B5B'
+Slack : -0.697
+TNS   : -15.157
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clock_1_hz'
+Slack : 0.125
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clock_10_hz'
+Slack : 0.162
+TNS   : 0.000
+
+------------------------------------------------------------

@@ -1,0 +1,372 @@
+#define __SFR_OFFSET 0
+
+#include "avr/io.h"
+.global start
+.global blink
+
+start:
+ ret
+
+blink:
+ldi r16, 0b11111001
+out DDRB, r16
+ldi r16, 0xFF
+out DDRD, r16
+ldi r16, 0b00000110
+out PORTB, r16
+
+
+ldi r16, 0x00
+ldi r18, 0x00
+
+call display_q_symbol
+loop: 
+in r18, PINB
+andi r18, 0x06
+cpi r18, 0x02 ; PB2 (ENTER) pressed?
+breq enter_pressed
+cpi r18, 0x04 ; PB1 (UP) pressed?
+brne loop ; note that the case of both buttons pressed is not taken into account
+inc r16 ; the UP button pressed!
+call delay_02 ; to account for de-bouncing
+mov r18, r16 ; copy r16 to r18
+call display_r18
+jmp loop
+
+enter_pressed:
+mov r18, r16 ; the first operand is entered!
+call display_r18
+call delay_02
+call display_blank
+call delay_02
+call display_r18
+call delay_02
+call display_blank
+call delay_02
+call display_r18
+call delay_02
+call display_blank
+call delay_02
+call display_r18
+; The first digit has been entered and acknowledged to user
+
+ldi r19, 0x00 ; used for reading second digit
+call display_q_symbol
+loop2: in r18, PINB ; read port B
+andi r18, 0x06
+cpi r18, 0x02 ; PB2 (ENTER) pressed?
+breq enter_pressed_2
+cpi r18, 0x04 ; PB1 (UP) pressed?
+brne loop2 ; note that the case of both buttons pressed is not taken into account
+inc r19 ; the UP button pressed!
+call delay_02 ; to account for de-bouncing
+mov r18, r19 ; copy r18 to r19
+call display_r18
+jmp loop2
+
+enter_pressed_2:
+mov r18, r19 ; copy r18 to r19
+call delay_02
+call display_blank
+call delay_02
+call display_r18
+call delay_02
+call display_blank
+call delay_02
+call display_r18
+call delay_02
+call display_blank
+call delay_02
+call display_r18; The second digit has been entered and acknowledged to user
+
+mul r16, r19 
+mov r20, r0
+mov r21, r0
+lsr r21
+lsr r21
+lsr r21
+lsr r21
+answer_loop:
+mov r18, r20
+call display_r18
+call delay_05
+call display_blank
+call delay_05
+mov r18, r21
+call display_r18
+call delay_05
+call display_blank
+call delay_05
+call display_dash
+call delay_05
+call display_blank
+call delay_05
+jmp answer_loop
+
+
+delay_05:
+ldi r31, 0xE1
+d05loop3:
+  mul r28, r28
+  ldi r30, 0x0
+  d05loop2:
+    mul r28, r28
+    ldi r29, 0x0
+    d05loop1:
+      mul r28, r28
+      inc r29
+    brne d05loop1
+   inc r30
+  brne d05loop2
+  inc r31
+brne d05loop3
+
+
+delay_02:
+ldi r31, 0xF3
+d02loop3:
+  mul r28, r28
+  ldi r30, 0x0
+  d02loop2:
+    mul r28, r28
+    ldi r29, 0x0
+    d02loop1:
+      mul r28, r28
+      inc r29
+    brne d02loop1
+   inc r30
+  brne d02loop2
+  inc r31
+brne d02loop3
+
+display_q_symbol:
+sbi PORTB, 4
+sbi PORTB, 5
+cbi PORTD, 4
+cbi PORTD, 3
+sbi PORTD, 2
+cbi PORTB, 3
+sbi PORTB, 0
+ret
+
+display_dash:
+cbi PORTB, 4
+cbi PORTB, 5
+cbi PORTD, 4
+cbi PORTD, 3
+cbi PORTD, 2
+cbi PORTB, 3
+sbi PORTB, 0
+ret
+
+display_blank:
+cbi PORTB, 4
+cbi PORTB, 5
+cbi PORTD, 4
+cbi PORTD, 3
+cbi PORTD, 2
+cbi PORTB, 3
+cbi PORTB, 0
+ret
+
+display_r18:
+andi r18, 0b00001111
+cpi r18, 0x0
+breq show0
+cpi r18, 0x1
+breq show1
+cpi r18, 0x2
+breq show2
+cpi r18, 0x3
+breq show3
+rjmp jump1
+
+show0:
+sbi PORTB, 4
+sbi PORTB, 5
+sbi PORTD, 4
+sbi PORTD, 3
+sbi PORTD, 2
+sbi PORTB, 3
+cbi PORTB, 0
+ret
+
+show1:
+cbi PORTB, 4
+sbi PORTB, 5
+sbi PORTD, 4
+cbi PORTD, 3
+cbi PORTD, 2
+cbi PORTB, 3
+cbi PORTB, 0
+ret
+
+show2:
+sbi PORTB, 4
+sbi PORTB, 5
+cbi PORTD, 4
+sbi PORTD, 3
+sbi PORTD, 2
+cbi PORTB, 3
+sbi PORTB, 0
+ret
+show3:
+sbi PORTB, 4
+sbi PORTB, 5
+sbi PORTD, 4
+sbi PORTD, 3
+cbi PORTD, 2
+cbi PORTB, 3
+sbi PORTB, 0
+ret
+
+jump1:
+cpi r18, 0x4
+breq show4
+cpi r18, 0x4
+breq show5
+cpi r18, 0x6
+breq show6
+cpi r18, 0x7
+breq show7
+cpi r18, 0x8
+breq show8
+rjmp jump2
+
+show4:
+cbi PORTB, 4
+sbi PORTB, 5
+sbi PORTD, 4
+cbi PORTD, 3
+cbi PORTD, 2
+sbi PORTB, 3
+sbi PORTB, 0
+ret
+
+show5:
+sbi PORTB, 4
+cbi PORTB, 5
+sbi PORTD, 4
+sbi PORTD, 3
+cbi PORTD, 2
+sbi PORTB, 3
+sbi PORTB, 0
+ret
+
+show6:
+sbi PORTB, 4
+cbi PORTB, 5
+sbi PORTD, 4
+sbi PORTD, 3
+sbi PORTD, 2
+sbi PORTB, 3
+sbi PORTB, 0
+ret
+
+show7:
+sbi PORTB, 4
+sbi PORTB, 5
+sbi PORTD, 4
+cbi PORTD, 3
+cbi PORTD, 2
+cbi PORTB, 3
+cbi PORTB, 0
+ret
+
+show8:
+sbi PORTD, 4
+sbi PORTB, 5
+sbi PORTB, 4
+sbi PORTD, 3
+sbi PORTD, 2
+sbi PORTB, 3
+sbi PORTB, 0
+ret
+
+jump2:
+cpi r18, 0x9
+breq show9
+cpi r18, 0xA
+breq showa
+cpi r18, 0xB
+breq showb
+cpi r18, 0xC
+breq showc
+cpi r18, 0xD
+breq showd
+cpi r18, 0xE
+breq showe
+cpi r18, 0xF
+breq showf
+
+
+show9:
+sbi PORTB, 4
+sbi PORTB, 5
+sbi PORTD, 4
+sbi PORTD, 3
+cbi PORTD, 2
+sbi PORTB, 3
+sbi PORTB, 0
+ret
+
+showa:
+sbi PORTB, 4
+sbi PORTB, 5
+sbi PORTD, 4
+cbi PORTD, 3
+sbi PORTD, 2
+sbi PORTB, 3
+sbi PORTB, 0
+ret
+
+showb:
+cbi PORTB, 4
+cbi PORTB, 5
+sbi PORTD, 4
+sbi PORTD, 3
+sbi PORTD, 2
+sbi PORTB, 3
+sbi PORTB, 0
+ret
+
+showc:
+sbi PORTB, 4
+cbi PORTB, 5
+cbi PORTD, 4
+sbi PORTD, 3
+sbi PORTD, 2
+sbi PORTB, 3
+cbi PORTB, 0
+ret
+
+showd:
+cbi PORTB, 4
+sbi PORTB, 5
+sbi PORTD, 4
+sbi PORTD, 3
+sbi PORTD, 2
+cbi PORTB, 3
+sbi PORTB, 0
+ret
+
+showe:
+sbi PORTB, 4
+cbi PORTB, 5
+cbi PORTD, 4
+sbi PORTD, 3
+sbi PORTD, 2
+sbi PORTB, 3
+sbi PORTB, 0
+ret
+
+showf:
+sbi PORTB, 4
+cbi PORTB, 5
+cbi PORTD, 4
+cbi PORTD, 3
+sbi PORTD, 2
+sbi PORTB, 3
+sbi PORTB, 0
+ldi r18, 0x01
+ret

@@ -1,0 +1,33 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.8</VERSION>
+ <DEVICE>"ATmega328P"</DEVICE>
+ <WORKING_DIR>C:\Users\mcart\Documents\syde_192L\LAB_5\section_4_1\section_4_1\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\mcart\Documents\syde_192L\LAB_5\section_4_1\section_4_1\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m328Pdef.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\mcart\Documents\syde_192L\LAB_5\section_4_1\section_4_1\Debug\section_4_1.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>section_4_1.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>section_4_1.map</FILE>
+  <FILE>section_4_1.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <overall_loop><FILE>C:\Users\mcart\Documents\syde_192L\LAB_5\section_4_1\section_4_1\main.asm</FILE><LINE>9</LINE></overall_loop>
+  <outer_outer_loop><FILE>C:\Users\mcart\Documents\syde_192L\LAB_5\section_4_1\section_4_1\main.asm</FILE><LINE>20</LINE></outer_outer_loop>
+  <outer_loop><FILE>C:\Users\mcart\Documents\syde_192L\LAB_5\section_4_1\section_4_1\main.asm</FILE><LINE>22</LINE></outer_loop>
+  <inner_loop><FILE>C:\Users\mcart\Documents\syde_192L\LAB_5\section_4_1\section_4_1\main.asm</FILE><LINE>24</LINE></inner_loop>
+  <outer_outer_loop2><FILE>C:\Users\mcart\Documents\syde_192L\LAB_5\section_4_1\section_4_1\main.asm</FILE><LINE>41</LINE></outer_outer_loop2>
+  <outer_loop2><FILE>C:\Users\mcart\Documents\syde_192L\LAB_5\section_4_1\section_4_1\main.asm</FILE><LINE>43</LINE></outer_loop2>
+  <inner_loop2><FILE>C:\Users\mcart\Documents\syde_192L\LAB_5\section_4_1\section_4_1\main.asm</FILE><LINE>45</LINE></inner_loop2>
+ </LABELS>
+</ASSEMBLER_INFO>

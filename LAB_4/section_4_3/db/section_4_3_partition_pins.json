@@ -1,0 +1,21 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "LEDR[0]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDG[5]",
+					"strict" : false
+				},
+				{
+					"name" : "CLOCK_50_B5B",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

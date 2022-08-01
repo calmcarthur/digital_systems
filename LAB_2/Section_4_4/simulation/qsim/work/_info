@@ -1,0 +1,98 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/mcart/Documents/syde_192L/LAB_2/Section_4_4/simulation/qsim
+Etwo_bits_adder
+Z1 w1654455677
+Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z3 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 OGn598C_0mX<WSGfCb?AK2
+Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z5 DPx8 cyclonev 19 cyclonev_components 0 22 CcdNAEi>PYH4@n><]NQ]V2
+Z6 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z7 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z8 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 QZo1Vh6en2ZO3=hNmAfQ>0
+R0
+Z9 8Section_4_4.vho
+Z10 FSection_4_4.vho
+l0
+L36
+V630Z93i@?h]L1Hz4QTo>F3
+!s100 d[<jJ_zgkR^YTXma@2BMK2
+Z11 OV;C;10.5b;63
+32
+Z12 !s110 1654455678
+!i10b 1
+Z13 !s108 1654455678.000000
+Z14 !s90 -work|work|Section_4_4.vho|
+Z15 !s107 Section_4_4.vho|
+!i113 1
+Z16 o-work work
+Z17 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+DEx4 work 14 two_bits_adder 0 22 630Z93i@?h]L1Hz4QTo>F3
+l117
+L80
+VeTmBJ9GJN8fn>TeLZL^D53
+!s100 WSXQg=F1I]OQTm@9NN:kh3
+R11
+32
+R12
+!i10b 1
+R13
+R14
+R15
+!i113 1
+R16
+R17
+Etwo_bits_adder_vhd_vec_tst
+Z18 w1654455676
+R6
+R7
+R0
+Z19 8output_files/Waveform.vwf.vht
+Z20 Foutput_files/Waveform.vwf.vht
+l0
+L31
+VeDSQN[l<a7bKTZBPZYYfL3
+!s100 UJ<2kYX9@<n[h8g4SnR7m3
+R11
+32
+R12
+!i10b 1
+R13
+Z21 !s90 -work|work|output_files/Waveform.vwf.vht|
+Z22 !s107 output_files/Waveform.vwf.vht|
+!i113 1
+R16
+R17
+Atwo_bits_adder_arch
+R6
+R7
+Z23 DEx4 work 26 two_bits_adder_vhd_vec_tst 0 22 eDSQN[l<a7bKTZBPZYYfL3
+l48
+L33
+Z24 V^j8O@ddU8G3YEB2JFHE;V3
+Z25 !s100 NBUQeR]4zZN:=2;bo:l_@2
+R11
+32
+R12
+!i10b 1
+R13
+R21
+R22
+!i113 1
+R16
+R17
